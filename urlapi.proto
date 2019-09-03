@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+message ShortenRequest {
+    string url = 1;
+}
+
+message LengthenRequest {
+    string url = 1;
+}
+
+message ShortenResponse {
+    string shorturl = 1;
+    string error = 2;
+}
+
+message LengthenResponse {
+    string longurl = 1;
+    string error = 2;
+}
+
+service ShortenAPIService {
+    rpc Shorten ShortenRequest returns (ShortenResponse);
+    rpc Lengthen LengthenRequest returns (LengthenResponse);
+}
