@@ -19,6 +19,6 @@ message LengthenResponse {
 }
 
 service ShortenAPIService {
-    rpc Shorten ShortenRequest returns (ShortenResponse);
-    rpc Lengthen LengthenRequest returns (LengthenResponse);
+    rpc Shorten (ShortenRequest) returns (ShortenResponse);
+    rpc Lengthen (LengthenRequest) returns (LengthenResponse);
 }
