@@ -1,8 +1,12 @@
 syntax = "proto3";
 
 message ShortenRequest {
+    enum CreateMode {
+        RETREIVE = 0;
+        FORCE_CREATE = 1;
+    }
     string url = 1;
-    bool force = 2;
+    CreateMode force = 2;
 }
 
 message LengthenRequest {
