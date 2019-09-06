@@ -2,6 +2,7 @@ syntax = "proto3";
 
 message ShortenRequest {
     string url = 1;
+    bool force = 2;
 }
 
 message LengthenRequest {
