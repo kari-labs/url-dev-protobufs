@@ -1,5 +1,5 @@
 syntax = "proto3";
-package urlapi;
+package link_service;
 
 message ShortenRequest {
   enum RequestType {
@@ -23,7 +23,7 @@ message LengthenResponse {
   string error = 2;
 }
 
-service ShortenAPIService {
+service APIShortener {
   rpc Shorten(ShortenRequest) returns (ShortenResponse);
   rpc Lengthen(LengthenRequest) returns (LengthenResponse);
 }
