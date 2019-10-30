@@ -7,23 +7,23 @@ message ShortenRequest {
       FORCE_GEN = 1;
   }
 
-  string url = 1;
+  string link = 1;
   RequestType type = 2;
 }
 
-message LengthenRequest { string url = 1; }
+message LengthenRequest { string link = 1; }
 
 message ShortenResponse {
-  string shorturl = 1;
+  string shortlink = 1;
   string error = 2;
 }
 
 message LengthenResponse {
-  string longurl = 1;
+  string longlink = 1;
   string error = 2;
 }
 
-service APIShortener {
+service LinkService {
   rpc Shorten(ShortenRequest) returns (ShortenResponse);
   rpc Lengthen(LengthenRequest) returns (LengthenResponse);
 }
