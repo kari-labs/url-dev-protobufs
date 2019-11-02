@@ -6,20 +6,20 @@ message ShortenRequest {
       RETRIEVE = 0;
       FORCE_GEN = 1;
   }
-
+  
   string link = 1;
-  RequestType type = 2;
+  RequestType request_type = 2;
 }
 
 message LengthenRequest { string link = 1; }
 
 message ShortenResponse {
-  string shortlink = 1;
+  string short_link = 1;
   string error = 2;
 }
 
 message LengthenResponse {
-  string longlink = 1;
+  string long_link = 1;
   string error = 2;
 }
 
